@@ -1,0 +1,2 @@
+require("alexript")
+print("Hello")
