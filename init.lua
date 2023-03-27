@@ -1,2 +1,1 @@
 require("alexript")
-print("Hello")
