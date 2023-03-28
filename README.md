@@ -20,6 +20,8 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 
 ## Editing
 - Undotree: <leader>u
+- format buffer: <leader>f
+- :so : <leader><leader>
 
 ## git
 - Git state: <leader>gs
