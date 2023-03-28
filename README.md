@@ -11,10 +11,38 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 
 # keys mapping
 - leader: <space>
+
+## project keymapping
 - project files: <leader>pf
 - git files: <C-p>
 - project search: <leader>ps
 - project view: <leader>pv
+
+## Editing
 - Undotree: <leader>u
+
+## git
 - Git state: <leader>gs
+
+## LSP keymapping
+- prev item: <C-p>
+- next item: <C-n>
+- confirm: <C-y>
+- complete: <C-.>
+
+### input mode
+- signahure help: <C-h>
+
+
+### normal mode
+- definition: gd
+- hover: K
+- workspace symbol: <leader>vws
+- diagnostic: <leader>vd
+- diagnostic next: [d
+- diagnostic prev: ]d
+- code action: <leader>vca
+- references: <leader>vrr
+- rename: <leader>vrn
+
 
