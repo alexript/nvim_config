@@ -14,3 +14,5 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - project files: <leader>pf
 - git files: <C-p>
 - project search: <leader>ps
+- project view: <leader>pv
+- Undotree: <leader>u
