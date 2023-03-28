@@ -15,7 +15,7 @@ require'nvim-treesitter.configs'.setup {
 	  "go", 
 	  "java", 
 	  "css", 
-	  "html",
+--	  "html",
 	  "diff",
 	  "gitcommit",
 	--  "gitconfig",
