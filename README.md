@@ -17,11 +17,17 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - git files: <C-p>
 - project search: <leader>ps
 - project view: <leader>pv
+- :bprviouse : <M-h> or <M-Left>
+- :bNext : <M-l> or <M-Right>
 
 ## Editing
 - Undotree: <leader>u
 - format buffer: <leader>f
 - :so : <leader><leader>
+
+## Visual mode
+- move selection down: J
+- move selection up: K
 
 ## git
 - Git state: <leader>gs
