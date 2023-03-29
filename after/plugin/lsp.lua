@@ -3,7 +3,10 @@ lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
     'eslint',
+    'lua_ls',
 })
+
+lsp.nvim_workspace()
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {
@@ -15,6 +18,7 @@ lsp.configure('lua-language-server', {
         }
     }
 })
+
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
