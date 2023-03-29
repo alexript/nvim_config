@@ -24,6 +24,10 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - Undotree: <leader>u
 - format buffer: <leader>f
 - :so : <leader><leader>
+- J and stay at line start: J
+- yank to system buffer: <leader>y
+- delete to system buffer: <leader>d
+- regexp replace word under cursor: <leader>s
 
 ## Visual mode
 - move selection down: J
