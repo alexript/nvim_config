@@ -21,10 +21,10 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         { run = ':TSUpdate' }
     )
+    use("nvim-treesitter/nvim-treesitter-context");
     use('nvim-treesitter/playground')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -52,4 +52,5 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         },
     }
+    use("eandrju/cellular-automaton.nvim")
 end)
