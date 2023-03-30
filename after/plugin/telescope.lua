@@ -5,6 +5,8 @@ vim.keymap.set('n', '<leader>ps', function()              -- project search
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 vim.keymap.set('n', '<leader>bb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>by', builtin.builtin, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>gr', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>hk', builtin.keymaps, {})
 
