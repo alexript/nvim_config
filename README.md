@@ -11,14 +11,14 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 
 # keys mapping
 - leader: <space>
+- buffer select: <leader>bb
+- help tags <leader>fh
 
 ## project keymapping
 - project files: <leader>pf
 - git files: <C-p>
 - project search: <leader>ps
 - project view: <leader>pv
-- :bprviouse : <M-h> or <M-Left>
-- :bNext : <M-l> or <M-Right>
 
 ## Editing
 - Undotree: <leader>u
