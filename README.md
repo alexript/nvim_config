@@ -57,4 +57,5 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - references: <leader>vrr
 - rename: <leader>vrn
 
-
+## other
+- tmux-sessionizer: <C-f>  (unix only)
