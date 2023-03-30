@@ -58,4 +58,4 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - rename: <leader>vrn
 
 ## other
-- tmux-sessionizer: <C-f>  (unix only)
+- tmux-sessionizer: <C-f>  (unix only, require tmux and https://github.com/jrmoulton/tmux-sessionizer)
