@@ -68,11 +68,10 @@ return require('packer').startup(function(use)
     }
     use('rebelot/heirline.nvim')
     use('rcarriga/nvim-notify')
-    use { 'fatih/vim-go',
-        { run = ':GoUpdateBinares' }
-    }
+    use { 'fatih/vim-go' }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use('nvim-tree/nvim-web-devicons')
 end)
