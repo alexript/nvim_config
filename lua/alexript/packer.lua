@@ -73,4 +73,5 @@ return require('packer').startup(function(use)
         end
     }
     use('rebelot/heirline.nvim')
+    use('rcarriga/nvim-notify')
 end)
