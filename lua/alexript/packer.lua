@@ -72,4 +72,5 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use('rebelot/heirline.nvim')
 end)
