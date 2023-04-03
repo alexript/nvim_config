@@ -38,4 +38,7 @@ if vim.fn.has('macunix') then
 end
 
 -- nvim-tree
-vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>") 
+vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>")
+
+-- diffview
+vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>")

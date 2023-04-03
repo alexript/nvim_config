@@ -71,4 +71,5 @@ return require('packer').startup(function(use)
     }
     use('nvim-tree/nvim-web-devicons')
     use('andweeb/presence.nvim')
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 end)
