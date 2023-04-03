@@ -73,4 +73,8 @@ return require('packer').startup(function(use)
     use('andweeb/presence.nvim')
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use("petertriho/nvim-scrollbar")
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
