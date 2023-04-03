@@ -2,7 +2,30 @@
 
 initialy based on [ThePrimeagen's init.lua](https://github.com/ThePrimeagen/init.lua)
 
-Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
+Prerequisite: 
+- install [ripgrep](https://github.com/BurntSushi/ripgrep).
+
+```
+$ cargo install ripgrep
+```
+
+- install [Packer](https://github.com/wbthomason/packer.nvim)
+
+> Unix, Linux Installation
+
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+If you use Arch Linux, there is also [an AUR
+package](https://aur.archlinux.org/packages/nvim-packer-git/).
+
+> Windows Powershell Installation
+
+```shell
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```
 
 ### windows notes
 
