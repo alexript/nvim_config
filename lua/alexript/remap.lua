@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 if vim.fn.has('macunix') then
     vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tms<CR>")
 end
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>") 

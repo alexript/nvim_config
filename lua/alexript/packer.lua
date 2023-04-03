@@ -53,4 +53,9 @@ return require('packer').startup(function(use)
         },
     }
     use("eandrju/cellular-automaton.nvim")
+    use { 'nvim-tree/nvim-tree.lua',
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
 end)

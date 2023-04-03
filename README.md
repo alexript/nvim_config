@@ -19,6 +19,7 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 - git files: <C-p>
 - project search: <leader>ps
 - project view: <leader>pv
+- nvim-tree: <leader>t
 
 ## Editing
 - Undotree: <leader>u
