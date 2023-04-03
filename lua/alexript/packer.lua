@@ -9,13 +9,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine-moon')
-        end
-    })
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use(
         'nvim-treesitter/nvim-treesitter',
@@ -74,4 +68,7 @@ return require('packer').startup(function(use)
     }
     use('rebelot/heirline.nvim')
     use('rcarriga/nvim-notify')
+    use { 'fatih/vim-go',
+        { run = ':GoUpdateBinares' }
+    }
 end)
