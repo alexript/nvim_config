@@ -70,4 +70,5 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use('nvim-tree/nvim-web-devicons')
+    use('andweeb/presence.nvim')
 end)
