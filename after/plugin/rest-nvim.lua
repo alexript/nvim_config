@@ -1,4 +1,5 @@
-require("rest-nvim").setup({
+local rest = require("rest-nvim");
+rest.setup({
     -- Open request results in a horizontal split
     result_split_horizontal = false,
     -- Keep the http file buffer above|left when split horizontal|vertical
@@ -31,4 +32,20 @@ require("rest-nvim").setup({
     env_file = '.env',
     custom_dynamic_variables = {},
     yank_dry_run = true,
-})
+});
+
+vim.keymap.set("n", "<leader>cu", -- RestNvim
+    function()
+        rest.run()
+    end
+);
+vim.keymap.set("n", "<leader>cp", -- RestNvimPreview
+    function()
+        rest.run(true)
+    end
+);
+vim.keymap.set("n", "<leader>co", -- RestNvimLast
+    function()
+        rest.last()
+    end
+);
