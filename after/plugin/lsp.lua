@@ -4,6 +4,7 @@ lsp.ensure_installed({
     'rust_analyzer',
     'eslint',
     'lua_ls',
+    'vls',
 })
 
 lsp.nvim_workspace()
