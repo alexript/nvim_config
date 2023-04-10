@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use('nathom/filetype.nvim')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
