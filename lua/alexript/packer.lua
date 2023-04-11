@@ -117,4 +117,5 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
     }
+    use('brenoprata10/nvim-highlight-colors')
 end)
