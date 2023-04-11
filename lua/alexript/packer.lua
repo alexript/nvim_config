@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use('nathom/filetype.nvim')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -28,9 +27,9 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' }, -- Required
             {
                 'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
+--                run = function()
+--                    pcall(vim.cmd, 'MasonUpdate')
+--                end,
             },                                       -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
