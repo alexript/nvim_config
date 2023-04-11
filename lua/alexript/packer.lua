@@ -91,4 +91,14 @@ return require('packer').startup(function(use)
         requires = { 'tpope/vim-repeat' }
     }
     use('Tastyep/structlog.nvim')
+    use {
+        "ahmedkhalf/lsp-rooter.nvim",
+        config = function()
+            require("lsp-rooter").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 end)
