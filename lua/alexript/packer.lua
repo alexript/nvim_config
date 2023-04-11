@@ -120,4 +120,6 @@ return require('packer').startup(function(use)
     use('brenoprata10/nvim-highlight-colors')
     use('Bekaboo/deadcolumn.nvim')
     use('yamatsum/nvim-cursorline')
+    use('xiyaowong/virtcolumn.nvim')
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 end)
