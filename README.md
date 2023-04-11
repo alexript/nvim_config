@@ -30,56 +30,56 @@ $ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - default data path is %USERPROFILE%\AppData\Local\nvim-data
 
 # keys mapping
-- leader: <space>
-- buffer select: <leader>bb
-- help tags <leader>fh
+- leader: &lt;space&gt;
+- buffer select: &lt;leader&gt;bb
+- help tags &lt;leader&gt;fh
 
 ## project keymapping
-- project files: <leader>pf
-- git files: <C-p>
-- project search: <leader>ps
-- project view: <leader>pv
-- nvim-tree: <leader>t
+- project files: &lt;leader&gt;pf
+- git files: &lt;C-p&gt;
+- project search: &lt;leader&gt;ps
+- project view: &lt;leader&gt;pv
+- nvim-tree: &lt;leader&gt;t
 
 ## Editing
-- Undotree: <leader>u
-- format buffer: <leader>f
-- :so : <leader><leader>
+- Undotree: &lt;leader&gt;u
+- format buffer: &lt;leader&gt;f
+- :so : &lt;leader&gt;&lt;leader&gt;
 - J and stay at line start: J
-- yank to system buffer: <leader>y
-- delete to system buffer: <leader>d
-- regexp replace word under cursor: <leader>s
+- yank to system buffer: &lt;leader&gt;y
+- delete to system buffer: &lt;leader&gt;d
+- regexp replace word under cursor: &lt;leader&gt;s
 
 ## Visual mode
 - move selection down: J
 - move selection up: K
 
 ## git
-- Git state: <leader>gs
+- Git state: &lt;leader&gt;gs
 
 ## LSP keymapping
-- prev item: <C-p>
-- next item: <C-n>
-- confirm: <C-y>
-- complete: <C-.>
+- prev item: &lt;C-p&gt;
+- next item: &lt;C-n&gt;
+- confirm: &lt;C-y&gt;
+- complete: &lt;C-.&gt;
 
 ### input mode
-- signahure help: <C-h>
+- signahure help: &lt;C-h&gt;
 
 
 ### normal mode
 - definition: gd
 - hover: K
-- workspace symbol: <leader>vws
-- diagnostic: <leader>vd
+- workspace symbol: &lt;leader&gt;vws
+- diagnostic: &lt;leader&gt;vd
 - diagnostic next: [d
 - diagnostic prev: ]d
-- code action: <leader>vca
-- references: <leader>vrr
-- rename: <leader>vrn
+- code action: &lt;leader&gt;vca
+- references: &lt;leader&gt;vrr
+- rename: &lt;leader&gt;vrn
 
 ## other
-- tmux-sessionizer: <C-f>  (unix only, require tmux and https://github.com/jrmoulton/tmux-sessionizer)
+- tmux-sessionizer: &lt;C-f&gt;  (unix only, require tmux and https://github.com/jrmoulton/tmux-sessionizer)
 
 ## comments
 
