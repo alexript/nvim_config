@@ -118,4 +118,11 @@ return require('packer').startup(function(use)
         requires = "nvim-lua/plenary.nvim",
     }
     use('brenoprata10/nvim-highlight-colors')
+    use({
+        "folke/noice.nvim",
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
+    })
 end)
