@@ -27,9 +27,7 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' }, -- Required
             {
                 'williamboman/mason.nvim',
---                run = function()
---                    pcall(vim.cmd, 'MasonUpdate')
---                end,
+                run = ':MasonUpdate'
             },                                       -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
@@ -86,5 +84,9 @@ return require('packer').startup(function(use)
     use {
         "rest-nvim/rest.nvim",
         requires = { "nvim-lua/plenary.nvim" }
+    }
+    use {
+        'ggandor/leap.nvim',
+        requires = { 'tpope/vim-repeat' }
     }
 end)
