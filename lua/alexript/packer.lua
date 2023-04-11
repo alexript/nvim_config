@@ -89,4 +89,5 @@ return require('packer').startup(function(use)
         'ggandor/leap.nvim',
         requires = { 'tpope/vim-repeat' }
     }
+    use('Tastyep/structlog.nvim')
 end)
