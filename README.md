@@ -5,7 +5,7 @@ initialy based on [ThePrimeagen's init.lua](https://github.com/ThePrimeagen/init
 Prerequisite: 
 - install [ripgrep](https://github.com/BurntSushi/ripgrep).
 
-```
+```shell
 $ cargo install ripgrep
 ```
 
@@ -14,17 +14,14 @@ $ cargo install ripgrep
 > Unix, Linux Installation
 
 ```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+$ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-
-If you use Arch Linux, there is also [an AUR
-package](https://aur.archlinux.org/packages/nvim-packer-git/).
 
 > Windows Powershell Installation
 
 ```shell
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+> git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
 ### windows notes
@@ -86,7 +83,7 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 
 ## comments
 
-    NORMAL mode
+> NORMAL mode
 
 - `gcc` - Toggles the current line using linewise comment
 - `gbc` - Toggles the current line using blockwise comment
@@ -95,7 +92,7 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 - `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
 - `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
 
-    VISUAL mode
+> VISUAL mode
 
 - `gc` - Toggles the region using linewise comment
 - `gb` - Toggles the region using blockwise comment
