@@ -122,4 +122,5 @@ return require('packer').startup(function(use)
     use('yamatsum/nvim-cursorline')
     use('xiyaowong/virtcolumn.nvim')
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+    use { 'nguyenvukhang/nvim-toggler' }
 end)
