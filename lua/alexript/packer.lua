@@ -113,4 +113,8 @@ return require('packer').startup(function(use)
     use({
         'karb94/neoscroll.nvim',
     })
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+    }
 end)
