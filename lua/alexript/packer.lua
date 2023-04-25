@@ -124,5 +124,4 @@ return require('packer').startup(function(use)
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
     use { 'nguyenvukhang/nvim-toggler' }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
-    use { 'echasnovski/mini.animate', branch = 'stable' }
 end)
