@@ -129,4 +129,11 @@ return require('packer').startup(function(use)
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
     use { 'nguyenvukhang/nvim-toggler' }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
+    use { 'LhKipp/nvim-nu',
+
+        { run = ':TSInstall nu' },
+        config = function()
+            require('nu').setup {}
+        end
+    }
 end)
