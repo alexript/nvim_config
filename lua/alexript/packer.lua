@@ -1,5 +1,10 @@
 vim.cmd [[packadd packer.nvim]]
 
+vim.defer_fn(function()
+    require("alexript.setup")
+end, 100
+)
+
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
