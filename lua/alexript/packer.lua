@@ -11,7 +11,10 @@ return require('packer').startup(function(use)
         config = function() require 'alexript.setup.telescope' end
     }
 
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "catppuccin/nvim",
+        as = "catppuccin",
+        config = function() require 'alexript.setup.colors' end
+    }
 
     use { 'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
@@ -20,8 +23,16 @@ return require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter-context");
     use('nvim-treesitter/playground')
     use('mrjones2014/nvim-ts-rainbow')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
+    use { 'mbbill/undotree',
+        config = function()
+            require 'alexript.setup.undotree'
+        end
+    }
+    use { 'tpope/vim-fugitive',
+        config = function()
+            require 'alexript.setup.fugitive'
+        end
+    }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -49,8 +60,16 @@ return require('packer').startup(function(use)
         config = function() require 'alexript.setup.lsp' end
     }
     use("eandrju/cellular-automaton.nvim")
-    use { 'nvim-tree/nvim-tree.lua' }
-    use('lewis6991/gitsigns.nvim')
+    use { 'nvim-tree/nvim-tree.lua',
+        config = function()
+            require 'alexript.setup.nvim-tree'
+        end
+    }
+    use { 'lewis6991/gitsigns.nvim',
+        config = function()
+            require 'alexript.setup.fugitive'
+        end
+    }
 
     use {
         "folke/which-key.nvim",
@@ -64,17 +83,40 @@ return require('packer').startup(function(use)
             }
         end
     }
-    use('rebelot/heirline.nvim')
-    use('rcarriga/nvim-notify')
+    use { 'rebelot/heirline.nvim',
+        config = function()
+            require 'alexript.setup.heirline'
+        end
+    }
+    use { 'rcarriga/nvim-notify',
+        config = function()
+            require 'alexript.setup.notify'
+        end
+    }
     use { 'fatih/vim-go' }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require 'alexript.setup.lualine'
+        end
     }
-    use('nvim-tree/nvim-web-devicons')
-    use('andweeb/presence.nvim')
+    use { 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require 'alexript.setup.devicons'
+        end
+    }
+    use { 'andweeb/presence.nvim',
+        config = function()
+            require 'alexript.setup.presence'
+        end
+    }
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-    use("petertriho/nvim-scrollbar")
+    use { "petertriho/nvim-scrollbar",
+        config = function()
+            require 'alexript.setup.scrollbar'
+        end
+    }
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -87,11 +129,17 @@ return require('packer').startup(function(use)
     }
     use {
         "rest-nvim/rest.nvim",
-        requires = { "nvim-lua/plenary.nvim" }
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require 'alexript.setup.rest-nvim'
+        end
     }
     use {
         'ggandor/leap.nvim',
-        requires = { 'tpope/vim-repeat' }
+        requires = { 'tpope/vim-repeat' },
+        config = function()
+            require 'alexript.setup.leap'
+        end
     }
     use('Tastyep/structlog.nvim')
     use {
@@ -104,32 +152,59 @@ return require('packer').startup(function(use)
             }
         end
     }
-    use('ray-x/lsp_signature.nvim')
+    use { 'ray-x/lsp_signature.nvim',
+        config = function()
+            require 'alexript.setup.lsp_signature'
+        end
+    }
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require 'alexript.setup.trouble'
+        end
     }
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-    use({
+    use {
         'karb94/neoscroll.nvim',
-    })
+        config = function()
+            require 'alexript.setup.neoscroll'
+        end
+    }
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
+        config = function()
+            require 'alexript.setup.todo-comments'
+        end
     }
-    use('brenoprata10/nvim-highlight-colors')
-    use('Bekaboo/deadcolumn.nvim')
-    use('yamatsum/nvim-cursorline')
+    use { 'brenoprata10/nvim-highlight-colors',
+        config = function()
+            require 'alexript.setup.highlight-colors'
+        end
+    }
+    use { 'Bekaboo/deadcolumn.nvim',
+        config = function()
+            require 'alexript.setup.deadcolumn'
+        end
+    }
+    use { 'yamatsum/nvim-cursorline',
+        config = function() require 'alexript.setup.cursorline' end
+    }
     use('xiyaowong/virtcolumn.nvim')
     use {
         'kevinhwang91/nvim-ufo',
         requires = 'kevinhwang91/promise-async',
         config = function() require 'alexript.setup.ufo' end
     }
-    use { 'nguyenvukhang/nvim-toggler' }
+    use { 'nguyenvukhang/nvim-toggler',
+        config = function()
+            require 'alexript.setup.toggler'
+        end
+    }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
     use { 'LhKipp/nvim-nu',
         run = ':TSInstall nu',
