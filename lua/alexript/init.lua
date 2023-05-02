@@ -19,4 +19,3 @@ vim.cmd([[
   filetype on
   filetype plugin indent on
 ]])
-

@@ -90,6 +90,7 @@ function GetLayoutNameW()
     local name = toAnsi(buff)
     return name
 end
+
 function GetLayoutNameA()
     local buff = ffi.new("char[?]", ffi.C.KL_NAMELENGTH);
     local success = ffi.C.GetKeyboardLayoutNameA(buff)

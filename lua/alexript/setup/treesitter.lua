@@ -1,4 +1,4 @@
-require('nvim-treesitter.install').compilers = { 'clang', 'zig', 'cl' }
+require('nvim-treesitter.install').compilers = { 'cl', 'clang', 'zig' }
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "markdown",
