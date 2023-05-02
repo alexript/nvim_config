@@ -1,25 +1,22 @@
 vim.cmd [[packadd packer.nvim]]
 
-vim.defer_fn(function()
-    require("alexript.setup")
-end, 100
-)
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    use { 'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim' } },
+        config = function() require 'alexript.setup.telescope' end
     }
 
     use { "catppuccin/nvim", as = "catppuccin" }
 
-    use(
-        'nvim-treesitter/nvim-treesitter',
-        { run = ':TSUpdate' }
-    )
+    use { 'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function() require 'alexript.setup.treesitter' end
+    }
     use("nvim-treesitter/nvim-treesitter-context");
     use('nvim-treesitter/playground')
     use('mrjones2014/nvim-ts-rainbow')
@@ -49,6 +46,7 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },             -- Required
             { 'rafamadriz/friendly-snippets' }, -- Optional
         },
+        config = function() require 'alexript.setup.lsp' end
     }
     use("eandrju/cellular-automaton.nvim")
     use { 'nvim-tree/nvim-tree.lua' }
@@ -126,12 +124,15 @@ return require('packer').startup(function(use)
     use('Bekaboo/deadcolumn.nvim')
     use('yamatsum/nvim-cursorline')
     use('xiyaowong/virtcolumn.nvim')
-    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+        config = function() require 'alexript.setup.ufo' end
+    }
     use { 'nguyenvukhang/nvim-toggler' }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
     use { 'LhKipp/nvim-nu',
-
-        { run = ':TSInstall nu' },
+        run = ':TSInstall nu',
         config = function()
             require('nu').setup {}
         end
