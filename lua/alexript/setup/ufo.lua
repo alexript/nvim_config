@@ -12,9 +12,10 @@ capabilities.textDocument.foldingRange = {
     dynamicRegistration = false,
     lineFoldingOnly = true
 }
-local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
+local lspconfig = require('lspconfig')
+local language_servers = lspconfig.util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
 for _, ls in ipairs(language_servers) do
-    require('lspconfig')[ls].setup({
+    lspconfig[ls].setup({
         capabilities = capabilities
         -- you can add other fields for setting up lsp server in this table
     })
