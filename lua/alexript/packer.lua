@@ -59,6 +59,14 @@ return require('packer').startup(function(use)
         },
         config = function() require 'alexript.setup.lsp' end
     }
+    use { 'jose-elias-alvarez/null-ls.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+        config = function() require 'alexript.setup.null-ls' end
+    }
+    use { 'LhKipp/nvim-nu',
+        run = ':TSInstall nu',
+        config = function() require 'alexript.setup.nu' end
+    }
     use("eandrju/cellular-automaton.nvim")
     use { 'nvim-tree/nvim-tree.lua',
         config = function()
@@ -206,10 +214,4 @@ return require('packer').startup(function(use)
         end
     }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
-    use { 'LhKipp/nvim-nu',
-        run = ':TSInstall nu',
-        config = function()
-            require('nu').setup {}
-        end
-    }
 end)
