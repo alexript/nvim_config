@@ -4,25 +4,13 @@ initialy based on [ThePrimeagen's init.lua](https://github.com/ThePrimeagen/init
 
 Prerequisite: 
 - install [ripgrep](https://github.com/BurntSushi/ripgrep).
+- install [stylua](https://github.com/JohnnyMorganz/StyLua).
 
 ```shell
 $ cargo install ripgrep
+$ cargo install stylua
 ```
 
-- install [Packer](https://github.com/wbthomason/packer.nvim)
-
-> Unix, Linux Installation
-
-```shell
-$ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-> Windows Powershell Installation
-
-```shell
-> git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-```
 
 ### windows notes
 
