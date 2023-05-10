@@ -1,4 +1,4 @@
-local rest = require("rest-nvim");
+local rest = require("rest-nvim")
 rest.setup({
     -- Open request results in a horizontal split
     result_split_horizontal = false,
@@ -24,28 +24,34 @@ rest.setup({
             json = "jq",
             html = function(body)
                 return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
-            end
+            end,
         },
     },
     -- Jump to request line on run
     jump_to_request = false,
-    env_file = '.env',
+    env_file = ".env",
     custom_dynamic_variables = {},
     yank_dry_run = true,
-});
+})
 
-vim.keymap.set("n", "<leader>cu", -- RestNvim
+vim.keymap.set(
+    "n",
+    "<leader>cu", -- RestNvim
     function()
         rest.run()
     end
-);
-vim.keymap.set("n", "<leader>cp", -- RestNvimPreview
+)
+vim.keymap.set(
+    "n",
+    "<leader>cp", -- RestNvimPreview
     function()
         rest.run(true)
     end
-);
-vim.keymap.set("n", "<leader>co", -- RestNvimLast
+)
+vim.keymap.set(
+    "n",
+    "<leader>co", -- RestNvimLast
     function()
         rest.last()
     end
-);
+)

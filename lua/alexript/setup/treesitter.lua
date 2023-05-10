@@ -1,5 +1,5 @@
-require('nvim-treesitter.install').compilers = { 'cl', 'clang', 'zig' }
-require 'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.install").compilers = { "cl", "clang", "zig" }
+require("nvim-treesitter.configs").setup({
     ensure_installed = {
         "markdown",
         "c",
@@ -41,4 +41,4 @@ require 'nvim-treesitter.configs'.setup {
         -- colors = {}, -- table of hex strings
         -- termcolors = {} -- table of colour name strings
     },
-}
+})

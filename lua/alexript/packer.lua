@@ -265,6 +265,16 @@ return require("packer").startup({
         })
         use({ "echasnovski/mini.nvim", branch = "stable" })
 
+        use({
+            "saecki/crates.nvim",
+            -- tag = 'v0.3.0',
+            event = { "BufRead Cargo.toml" },
+            requires = { "nvim-lua/plenary.nvim" },
+            config = function()
+                require("crates").setup()
+            end,
+        })
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then

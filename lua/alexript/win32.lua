@@ -1,10 +1,9 @@
 local ffi = require("ffi")
 
 local exports = {}
-exports.Lib = ffi.load("user32");
+exports.Lib = ffi.load("user32")
 
-
-ffi.cdef [[
+ffi.cdef([[
 static const int KL_NAMELENGTH = 9;
 static const int  CP_ACP                  =  0;           // default to ANSI code page
 
@@ -29,30 +28,23 @@ BOOL __stdcall GetKeyboardLayoutNameW( LPWSTR pwszKLID);
 
 int __stdcall WideCharToMultiByte( UINT CodePage, DWORD dwFlags, LPCWCH lpWideCharStr, int cchWideChar, LPSTR lpMultiByteStr, int cbMultiByte, LPCCH lpDefaultChar, LPBOOL lpUsedDefaultChar);
 
-]]
+]])
 
 local function toAnsi(in_Src, nsrcBytes)
     if in_Src == nil then
-        return nil;
+        return nil
     end
 
-    local cchWideChar = nsrcBytes or -1;
+    local cchWideChar = nsrcBytes or -1
 
     -- find out how many characters needed
-    local bytesneeded = ffi.C.WideCharToMultiByte(
-        ffi.C.CP_ACP,
-        0,
-        ffi.cast("const uint16_t *", in_Src),
-        cchWideChar,
-        nil,
-        0,
-        nil,
-        nil);
+    local bytesneeded =
+        ffi.C.WideCharToMultiByte(ffi.C.CP_ACP, 0, ffi.cast("const uint16_t *", in_Src), cchWideChar, nil, 0, nil, nil)
 
     --print("BN: ", bytesneeded);
 
     if bytesneeded <= 0 then
-        return nil;
+        return nil
     end
 
     -- create a buffer to stuff the converted string into
@@ -67,24 +59,24 @@ local function toAnsi(in_Src, nsrcBytes)
         buff,
         bytesneeded,
         nil,
-        nil);
+        nil
+    )
 
     if cchWideChar == -1 then
-        return ffi.string(buff, byteswritten - 1);
+        return ffi.string(buff, byteswritten - 1)
     end
 
     return ffi.string(buff, byteswritten)
 end
 
-
 -- https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-language-pack-default-values?view=windows-11
 function GetLayoutNameW()
-    local buff = ffi.new("wchar_t[?]", ffi.C.KL_NAMELENGTH);
+    local buff = ffi.new("wchar_t[?]", ffi.C.KL_NAMELENGTH)
     local success = ffi.C.GetKeyboardLayoutNameW(buff)
 
     if success ~= 1 then
         print("failure: ", success)
-        return false;
+        return false
     end
 
     local name = toAnsi(buff)
@@ -92,12 +84,12 @@ function GetLayoutNameW()
 end
 
 function GetLayoutNameA()
-    local buff = ffi.new("char[?]", ffi.C.KL_NAMELENGTH);
+    local buff = ffi.new("char[?]", ffi.C.KL_NAMELENGTH)
     local success = ffi.C.GetKeyboardLayoutNameA(buff)
 
     if success ~= 1 then
         print("failure: ", success)
-        return false;
+        return false
     end
 
     local name = ffi.string(buff)

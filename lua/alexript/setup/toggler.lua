@@ -1,7 +1,7 @@
-require('nvim-toggler').setup({
+require("nvim-toggler").setup({
     -- your own inverses
     inverses = {
-        ['vim'] = 'emacs'
+        ["vim"] = "emacs",
     },
     -- removes the default <leader>i keymap
     remove_default_keybinds = true,
@@ -9,4 +9,4 @@ require('nvim-toggler').setup({
     remove_default_inverses = true,
 })
 
-vim.keymap.set({ 'n', 'v' }, '<leader>cl', require('nvim-toggler').toggle)
+vim.keymap.set({ "n", "v" }, "<leader>cl", require("nvim-toggler").toggle)
