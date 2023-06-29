@@ -83,13 +83,13 @@ return require("packer").startup({
                 require("alexript.setup.lsp")
             end,
         })
-        use({
-            "jose-elias-alvarez/null-ls.nvim",
-            requires = "nvim-lua/plenary.nvim",
-            config = function()
-                require("alexript.setup.null-ls")
-            end,
-        })
+--        use({
+--            "jose-elias-alvarez/null-ls.nvim",
+--            requires = "nvim-lua/plenary.nvim",
+--            config = function()
+--                require("alexript.setup.null-ls")
+--            end,
+--        })
         use({
             "LhKipp/nvim-nu",
             run = ":TSInstall nu",
