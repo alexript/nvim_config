@@ -1,13 +1,5 @@
-local lsp = require("lsp-zero").preset("recommended")
-lsp.ensure_installed({
-    "tsserver",
-    "rust_analyzer",
-    "eslint",
-    "lua_ls",
-    "vls",
-})
-
-lsp.nvim_workspace()
+local lsp_zero = require('lsp-zero')
+local lsp = lsp_zero.preset("recommended")
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
@@ -22,6 +14,20 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'tsserver',
+        "eslint",
+        "lua_ls",
+        "vls",
+        'rust_analyzer',
+    },
+    handlers = {
+        lsp.setup,
+    }
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
     desc = "LSP actions",
@@ -95,6 +101,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<Enter>"] = cmp.mapping.confirm({ select = true }),
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
     ["<C-.>"] = cmp.mapping.complete(),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
 })
 
 cmp.setup({
@@ -109,4 +117,5 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "crates" },
     },
+    formatting = lsp_zero.cmp_format(),
 })
