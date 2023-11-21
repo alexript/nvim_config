@@ -144,10 +144,16 @@ cmp.setup({
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end
+    },
     sources = {
         { name = "path" },
         { name = "buffer" },
         { name = "nvim_lsp" },
+        { name = "luasnip", option = { show_autosnippets = true } },
         { name = "crates" },
     },
     formatting = lsp_zero.cmp_format(),
