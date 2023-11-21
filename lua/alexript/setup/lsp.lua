@@ -157,4 +157,7 @@ cmp.setup({
         { name = "crates" },
     },
     formatting = lsp_zero.cmp_format(),
+    experimental = {
+        ghost_text = true,
+    },
 })
