@@ -64,32 +64,32 @@ return require("packer").startup({
                 {
                     "williamboman/mason.nvim",
                     run = ":MasonUpdate",
-                },                           -- Optional
+                },                                       -- Optional
                 { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
                 -- Autocompletion
-                { "hrsh7th/nvim-cmp" }, -- Required
-                { "hrsh7th/cmp-nvim-lsp" }, -- Required
-                { "hrsh7th/cmp-buffer" }, -- Optional
-                { "hrsh7th/cmp-path" }, -- Optional
+                { "hrsh7th/nvim-cmp" },         -- Required
+                { "hrsh7th/cmp-nvim-lsp" },     -- Required
+                { "hrsh7th/cmp-buffer" },       -- Optional
+                { "hrsh7th/cmp-path" },         -- Optional
                 { "saadparwaiz1/cmp_luasnip" }, -- Optional
-                { "hrsh7th/cmp-nvim-lua" }, -- Optional
+                { "hrsh7th/cmp-nvim-lua" },     -- Optional
 
                 -- Snippets
-                { "L3MON4D3/LuaSnip" }, -- Required
+                { "L3MON4D3/LuaSnip" },             -- Required
                 { "rafamadriz/friendly-snippets" }, -- Optional
             },
             config = function()
                 require("alexript.setup.lsp")
             end,
         })
---        use({
---            "jose-elias-alvarez/null-ls.nvim",
---            requires = "nvim-lua/plenary.nvim",
---            config = function()
---                require("alexript.setup.null-ls")
---            end,
---        })
+        --        use({
+        --            "jose-elias-alvarez/null-ls.nvim",
+        --            requires = "nvim-lua/plenary.nvim",
+        --            config = function()
+        --                require("alexript.setup.null-ls")
+        --            end,
+        --        })
         use({
             "LhKipp/nvim-nu",
             run = ":TSInstall nu",
@@ -257,6 +257,13 @@ return require("packer").startup({
                 require("alexript.setup.ufo")
             end,
         })
+        use({
+            "soulis-1256/hoverhints.nvim",
+            config = function()
+                require("alexript.setup.hoverhints")
+            end,
+        })
+
         use({
             "nguyenvukhang/nvim-toggler",
             config = function()

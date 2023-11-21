@@ -1,0 +1,2 @@
+require("hoverhints").setup({
+})
