@@ -23,17 +23,16 @@ require("lualine").setup({
             "mode",
         },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
+        lualine_c = { "filename", "filesize" },
         lualine_x = { "encoding", "fileformat", "filetype" },
 
-        lualine_y = { "progress", "filesize" },
+        lualine_y = { "progress" },
         lualine_z = { "location",
             {
                 require("lazy.status").updates,
                 cond = require("lazy.status").has_updates,
                 color = { fg = "#ff9e64" }
             }
-            
         },
     },
     inactive_sections = {
