@@ -1,7 +1,7 @@
 local lsp_zero = require('lsp-zero')
-local lsp = lsp_zero.preset("recommended")
+local lspconfig = require("lspconfig")
 
-lsp.set_preferences({
+lsp_zero.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
         error = "✘",
@@ -11,9 +11,18 @@ lsp.set_preferences({
     },
 })
 
-lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({ buffer = bufnr })
 end)
+
+lsp_zero.setup()
+
+local function lua_ls_setup()
+    lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
+    lspconfig.vls.setup({})
+end
+
+lua_ls_setup()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -25,7 +34,8 @@ require('mason-lspconfig').setup({
         'rust_analyzer',
     },
     handlers = {
-        lsp.setup,
+        lsp_zero.default_setup,
+        lua_ls = lua_ls_setup,
     }
 })
 
@@ -84,12 +94,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.diagnostic.config({
     virtual_text = true,
 })
-
-local lspconfig = require("lspconfig")
-
-lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
-lspconfig.vls.setup({})
-
-lsp.setup()
-
-
