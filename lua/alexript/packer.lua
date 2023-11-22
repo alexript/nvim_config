@@ -296,6 +296,13 @@ return require("packer").startup({
             end,
         })
 
+        use({
+            "j-hui/fidget.nvim",
+            config = function()
+                require("alexript.setup.fidget")
+            end,
+        })
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
