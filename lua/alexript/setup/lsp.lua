@@ -19,10 +19,11 @@ lsp_zero.setup()
 
 local function lua_ls_setup()
     lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
-    lspconfig.vls.setup({})
 end
 
 lua_ls_setup()
+lspconfig.vls.setup({})
+lspconfig.rust_analyzer.setup({})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
