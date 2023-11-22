@@ -12,7 +12,7 @@ vim.opt.termguicolors = true
 
 require("alexript.set")
 require("alexript.remap")
-require("alexript.packer")
+require("alexript.lazy")
 
 vim.cmd([[
   syntax on
