@@ -6,3 +6,15 @@ vim.keymap.set("n", "<leader>bi", ts_builtin.builtin, {})
 vim.keymap.set("n", "<leader>fh", ts_builtin.help_tags, {})
 vim.keymap.set("n", "<leader>ps", ts_builtin.live_grep, {})
 vim.keymap.set("n", "<leader>hk", ts_builtin.keymaps, {})
+
+require('telescope').setup {
+    defaults = {
+    },
+    pickers = {
+        builtin = {
+            theme = "cursor",
+        }
+    },
+    extensions = {
+    }
+}
