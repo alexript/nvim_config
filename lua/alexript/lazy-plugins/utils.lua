@@ -54,7 +54,7 @@ return {
     "xiyaowong/virtcolumn.nvim",
     {
         "iamcco/markdown-preview.nvim",
-        run = function()
+        build = function()
             vim.fn["mkdp#util#install"]()
         end,
     },

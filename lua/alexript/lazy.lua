@@ -11,4 +11,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup("alexript.lazy-plugins", {})
+require('lazy').setup("alexript.lazy-plugins", {
+    install = {
+        colorscheme = { "catppuccin" }
+    },
+    ui = {
+        border = "rounded"
+    }
+})
