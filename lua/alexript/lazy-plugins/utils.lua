@@ -26,8 +26,13 @@ return {
     },
     {
         "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            "nvim-treesitter/nvim-treesitter",
+        },
         config = function()
-            require("nvim-autopairs").setup({})
+            require("alexript.setup.autopairs")
         end,
     },
     {
@@ -98,4 +103,3 @@ return {
         end,
     }
 }
-

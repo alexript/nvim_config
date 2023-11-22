@@ -25,6 +25,7 @@ return {
         },
         config = function()
             require("alexript.setup.lsp")
+            require("alexript.setup.cmp")
         end,
     },
     {
