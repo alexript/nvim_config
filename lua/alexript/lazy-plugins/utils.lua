@@ -101,5 +101,12 @@ return {
         config = function()
             require("alexript.setup.fidget")
         end,
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        config = function()
+            require("alexript.setup.blankline")
+        end
     }
 }
