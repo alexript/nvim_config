@@ -1,7 +1,12 @@
 return {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+
+        -- extensions
+        "nvim-telescope/telescope-project.nvim",
+    },
 
     config = function()
         require("alexript.setup.telescope")
