@@ -51,6 +51,10 @@ return {
         config = function()
             require("alexript.setup.trouble")
         end,
+    },
+    {
+        'onsails/lspkind.nvim',
+        dependencies = "VonHeikemen/lsp-zero.nvim"
     }
 }
 
