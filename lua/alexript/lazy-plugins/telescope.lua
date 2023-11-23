@@ -8,6 +8,7 @@ return {
         "nvim-telescope/telescope-project.nvim",
         "chip/telescope-software-licenses.nvim",
         "gbrlsnchs/telescope-lsp-handlers.nvim",
+        "xiyaowong/telescope-emoji.nvim",
     },
 
     config = function()
