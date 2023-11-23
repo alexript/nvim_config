@@ -36,4 +36,4 @@ vim.keymap.set("n", "<leader>hk", ts_builtin.keymaps, {})
 
 -- extensions
 vim.keymap.set("n", "<leader>pp", ts.extensions.project.project, {desc='Select project'})
-vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", {desc='Select project'})
+vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", {desc='Select License'})
