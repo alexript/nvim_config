@@ -11,6 +11,7 @@ return {
             "gbrlsnchs/telescope-lsp-handlers.nvim",
             "xiyaowong/telescope-emoji.nvim",
             "benfowler/telescope-luasnip.nvim",
+            "tsakirist/telescope-lazy.nvim",
         },
 
         config = function()

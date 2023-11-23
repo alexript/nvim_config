@@ -49,6 +49,9 @@ ts.setup({
                 vim.api.nvim_put({ emoji.value }, 'c', false, true)
             end,
         },
+        lazy = {
+            show_icon = true,
+        }
     }
 })
 ts.load_extension('project')
@@ -56,6 +59,7 @@ ts.load_extension("software-licenses")
 ts.load_extension('lsp_handlers')
 ts.load_extension("emoji")
 ts.load_extension('luasnip')
+ts.load_extension("lazy")
 
 local ts_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>pf", ts_builtin.find_files, { desc = 'Show files in project' }) -- project files
