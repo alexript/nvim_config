@@ -1,11 +1,5 @@
 return {
     {
-        "rebelot/heirline.nvim",
-        config = function()
-            require("alexript.setup.heirline")
-        end,
-    },
-    {
         "rcarriga/nvim-notify",
         config = function()
             require("alexript.setup.notify")
