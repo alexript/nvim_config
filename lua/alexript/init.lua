@@ -19,3 +19,9 @@ vim.cmd([[
   filetype on
   filetype plugin indent on
 ]])
+
+local fidget = require("fidget")
+
+function Notify(text)
+    fidget.notify(text, nil, {annote = "MY NOTE", key = "foobar"})
+end
