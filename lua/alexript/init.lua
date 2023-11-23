@@ -22,6 +22,8 @@ vim.cmd([[
 
 local fidget = require("fidget")
 
+--- notify via fidget
+---@param text text to be notifies
 function Notify(text)
     fidget.notify(text, nil, {annote = "MY NOTE", key = "foobar"})
 end
