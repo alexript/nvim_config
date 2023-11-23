@@ -10,6 +10,7 @@ return {
             "chip/telescope-software-licenses.nvim",
             "gbrlsnchs/telescope-lsp-handlers.nvim",
             "xiyaowong/telescope-emoji.nvim",
+            "benfowler/telescope-luasnip.nvim",
         },
 
         config = function()

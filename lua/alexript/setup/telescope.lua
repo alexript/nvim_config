@@ -55,6 +55,7 @@ ts.load_extension('project')
 ts.load_extension("software-licenses")
 ts.load_extension('lsp_handlers')
 ts.load_extension("emoji")
+ts.load_extension('luasnip')
 
 local ts_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>pf", ts_builtin.find_files, { desc = 'Show files in project' }) -- project files
