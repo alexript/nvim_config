@@ -42,7 +42,7 @@ require("fidget").setup({
     notification = {
         poll_rate = 10,               -- How frequently to update and render notifications
         filter = vim.log.levels.INFO, -- Minimum notifications level
-        override_vim_notify = true,  -- Automatically override vim.notify() with Fidget
+        override_vim_notify = false,  -- Automatically override vim.notify() with Fidget
         configs =                     -- How to configure notification groups when instantiated
         { default = require("fidget.notification").default_config },
 

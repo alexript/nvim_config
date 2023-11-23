@@ -25,6 +25,13 @@ return {
         end,
     },
     {
+        "folke/edgy.nvim",
+        event = "VeryLazy",
+        config = function()
+            require('alexript.setup.edgy')
+        end
+    },
+    {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         dependencies = {
@@ -37,6 +44,7 @@ return {
     },
     {
         "numToStr/Comment.nvim",
+        lazy = false,
         config = function()
             require("alexript.setup.comment")
         end,
