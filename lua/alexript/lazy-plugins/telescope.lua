@@ -7,6 +7,7 @@ return {
         -- extensions
         "nvim-telescope/telescope-project.nvim",
         "chip/telescope-software-licenses.nvim",
+        "gbrlsnchs/telescope-lsp-handlers.nvim",
     },
 
     config = function()
