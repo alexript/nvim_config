@@ -23,5 +23,12 @@ return {
         config = function()
             require("alexript.setup.cursorline")
         end,
+    },
+    {
+        "nvim-zh/colorful-winsep.nvim",
+        config = function()
+            require('alexript.setup.colorful-winsep')
+        end,
+        event = { "WinNew" },
     }
 }
