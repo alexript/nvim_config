@@ -126,5 +126,12 @@ return {
         config = function()
             require('alexript.setup.windows')
         end
+    },
+    {
+        'akinsho/toggleterm.nvim',
+        version = "*",
+        config = function()
+            require('alexript.setup.toggleterm')
+        end
     }
 }
