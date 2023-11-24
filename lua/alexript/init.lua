@@ -10,6 +10,10 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+local currenthome = vim.fn.expand('$HOME'):gsub("\\", "/") --os.getenv('HOME')
+
+vim.opt.shell = 'nu --env-config ' .. currenthome .. '/.config/nushell/env.nu --config ' .. currenthome .. '/.config/nushell/config.nu'
+
 require("alexript.set")
 require("alexript.remap")
 require("alexript.lazy")
@@ -25,5 +29,5 @@ local fidget = require("fidget")
 --- notify via fidget
 ---@param text text to be notifies
 function Notify(text)
-    fidget.notify(text, nil, {annote = "MY NOTE", key = "foobar"})
+    fidget.notify(text, nil, { annote = "MY NOTE", key = "foobar" })
 end
