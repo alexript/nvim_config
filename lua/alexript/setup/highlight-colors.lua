@@ -1,7 +1,9 @@
-require("nvim-highlight-colors").setup({
-    render = "first_column", -- or 'foreground' or 'first_column'
+local nhc = require("nvim-highlight-colors")
+
+nhc.setup({
+    render = "background", --"first_column", -- or 'foreground' or 'first_column'
     enable_named_colors = true,
-    enable_tailwind = false,
+    enable_tailwind = true,
     custom_colors = {
         -- label property will be used as a pattern initially(string.gmatch), therefore you need to escape the special characters by yourself with %
         { label = "%-%-theme%-font%-color",       color = "#fff" },
@@ -13,4 +15,4 @@ require("nvim-highlight-colors").setup({
     },
 })
 
-require("nvim-highlight-colors").turnOn()
+nhc.turnOn()
