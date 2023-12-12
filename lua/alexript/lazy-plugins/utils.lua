@@ -106,6 +106,7 @@ return {
     { "echasnovski/mini.nvim", branch = "stable" },
     {
         "j-hui/fidget.nvim",
+--        tag = "v1.0.0",
         config = function()
             require("alexript.setup.fidget")
         end,
