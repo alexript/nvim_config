@@ -53,10 +53,8 @@ lspconfig.rust_analyzer.setup({})
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        'tsserver',
         "eslint",
         "lua_ls",
-        "vls",
         'rust_analyzer',
     },
     handlers = {
