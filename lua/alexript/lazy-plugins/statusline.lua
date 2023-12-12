@@ -1,10 +1,10 @@
 return {
-    {
+    --[[ {
         "rcarriga/nvim-notify",
         config = function()
             require("alexript.setup.notify")
         end,
-    },
+    }, ]]
     {
         "nvim-tree/nvim-web-devicons",
         config = function()

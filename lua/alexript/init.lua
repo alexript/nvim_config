@@ -29,6 +29,6 @@ local fidget = require("fidget")
 
 --- notify via fidget
 ---@param text string text to be notifies
-function Notify(text)
+function Notifier(text)
     fidget.notify(text, nil, { annote = "MY NOTE", key = "foobar" })
 end

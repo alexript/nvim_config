@@ -5,7 +5,7 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         telescope = true,
-        notify = true,
+        notify = false,
         mason = true,
         treesitter = true,
         treesitter_context = true,
