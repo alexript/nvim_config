@@ -62,14 +62,14 @@ ts.load_extension('luasnip')
 ts.load_extension("lazy")
 
 local ts_builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>pf", ts_builtin.find_files, { desc = 'Show files in project' }) -- project files
-vim.keymap.set("n", "<C-p>", ts_builtin.git_files, {})                                       -- git files
-vim.keymap.set("n", "<leader>bb", ts_builtin.buffers, {})
-vim.keymap.set("n", "<leader>bi", ts_builtin.builtin, {})
-vim.keymap.set("n", "<leader>fh", ts_builtin.command_history, {})
-vim.keymap.set("n", "<leader>ps", ts_builtin.live_grep, {})
-vim.keymap.set("n", "<leader>hk", ts_builtin.keymaps, {})
+vim.keymap.set("n", "<leader>pf", ts_builtin.find_files, KeymapDesc('Show files in project')) -- project files
+vim.keymap.set("n", "<C-p>", ts_builtin.git_files, KeymapDesc("Show git files"))              -- git files
+vim.keymap.set("n", "<leader>bb", ts_builtin.buffers, KeymapDesc("Select buffer"))
+vim.keymap.set("n", "<leader>bi", ts_builtin.builtin, KeymapDesc("Select ts builtin"))
+vim.keymap.set("n", "<leader>fh", ts_builtin.command_history, KeymapDesc('Select from command history'))
+vim.keymap.set("n", "<leader>ps", ts_builtin.live_grep, KeymapDesc("Do a live grep"))
+vim.keymap.set("n", "<leader>hk", ts_builtin.keymaps, KeymapDesc("Select from keymaps"))
 
 -- extensions
-vim.keymap.set("n", "<leader>pp", ts.extensions.project.project, { desc = 'Select project' })
-vim.keymap.set("n", "<leader>sl", ":Telescope software-licenses find<CR>", { desc = 'Select License' })
+vim.keymap.set("n", "<leader>pp", ts.extensions.project.project, KeymapDesc('Select project'))
+vim.keymap.set("n", "<leader>ll", ":Telescope software-licenses find<CR>", KeymapDesc('Select License'))

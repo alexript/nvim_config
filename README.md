@@ -26,7 +26,6 @@ $ cargo install stylua
 - project files: &lt;leader&gt;pf
 - git files: &lt;C-p&gt;
 - project search: &lt;leader&gt;ps
-- project view: &lt;leader&gt;pv
 - nvim-tree: &lt;leader&gt;t
 
 ## Editing

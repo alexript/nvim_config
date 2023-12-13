@@ -39,19 +39,22 @@ vim.keymap.set(
     "<leader>cu", -- RestNvim
     function()
         rest.run()
-    end
+    end,
+    KeymapDesc("Send REST request")
 )
 vim.keymap.set(
     "n",
     "<leader>cp", -- RestNvimPreview
     function()
         rest.run(true)
-    end
+    end,
+    KeymapDesc('Preview REST request')
 )
 vim.keymap.set(
     "n",
     "<leader>co", -- RestNvimLast
     function()
         rest.last()
-    end
+    end,
+    KeymapDesc('Repeat last REST request')
 )

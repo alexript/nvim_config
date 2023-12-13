@@ -4,7 +4,7 @@ require("neodev").setup({
         enabled = true, -- when not enabled, neodev will not change any settings to the LSP server
         -- these settings will be used for your Neovim config directory
         runtime = true, -- runtime path
-        types = true, -- full signature, docs and completion of vim.api, vim.treesitter, vim.lsp and others
+        types = true,   -- full signature, docs and completion of vim.api, vim.treesitter, vim.lsp and others
         plugins = true, -- installed opt or start plugins in packpath
         -- you can also specify the list of plugins to make available as a workspace library
         -- plugins = { "nvim-treesitter", "plenary.nvim", "telescope.nvim" },
@@ -70,10 +70,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         vim.keymap.set("n", "gd", function()
             vim.lsp.buf.definition()
-        end, opts)
+        end, KeymapDesc("Go to definition", opts))
         vim.keymap.set("n", "K", function()
             vim.lsp.buf.hover()
-        end, opts)
+        end, KeymapDesc("Hover info about the symbol under cursor", opts))
         vim.keymap.set("n", "<leader>vws", function()
             vim.lsp.buf.workspace_symbol()
         end, opts)
@@ -99,7 +99,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "gr", function()
             vim.lsp.buf.references()
         end, opts)
-        vim.keymap.set("n", "gs", function()
+        vim.keymap.set("n", "gh", function()
             vim.lsp.buf.signature_help()
         end, opts)
         vim.keymap.set("n", "<F2>", function()
