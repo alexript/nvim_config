@@ -15,7 +15,7 @@ require('windows').setup({
     },
     animation = {
         enable = true,
-        duration = 300,
+        duration = 100,
         fps = 30,
         easing = "in_out_sine"
     }
