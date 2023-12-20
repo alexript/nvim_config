@@ -23,6 +23,9 @@ require("neodev").setup({
     pathStrict = true,
 })
 
+-- Setup nvim-java before lspconfig
+require('java').setup()
+
 local lsp_zero = require('lsp-zero')
 local lspconfig = require("lspconfig")
 
@@ -49,6 +52,7 @@ end
 lua_ls_setup()
 lspconfig.vls.setup({})
 lspconfig.rust_analyzer.setup({})
+lspconfig.jdtls.setup({})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
