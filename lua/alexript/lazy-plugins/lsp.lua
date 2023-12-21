@@ -20,7 +20,7 @@ return {
             { "saadparwaiz1/cmp_luasnip" }, -- Optional
             { "hrsh7th/cmp-nvim-lua" },     -- Optional
             { "folke/neodev.nvim" },
-
+            { "folke/neoconf.nvim" },
             -- Snippets
             { "L3MON4D3/LuaSnip" },             -- Required
             { "rafamadriz/friendly-snippets" }, -- Optional
@@ -60,5 +60,11 @@ return {
     {
         "folke/neodev.nvim",
         dependencies = "hrsh7th/nvim-cmp",
+    },
+    {
+        "folke/neoconf.nvim",
+        dependencies = {
+            "folke/neodev.nvim",
+        }
     }
 }

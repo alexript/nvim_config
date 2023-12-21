@@ -1,0 +1,36 @@
+{
+    "neodev": {
+        "library": {
+            "enabled": true,
+            "plugins": [
+                "nvim-lspconfig",
+                "lsp"
+            ]
+        }
+    },
+    "neoconf": {
+        "plugins": {
+            "lua_ls": {
+                "enabled": true
+            }
+        }
+    },
+    "lspconfig": {
+        "lua_ls": {
+            "Lua.completion.callSnippet": "Replace"
+        },
+        "jdtls": {
+            "java.configuration.runtimes": [
+{
+"name": "JavaSE-17",
+"path": "C:/Java/graalvm-ce-java17-22.3.0",
+"default": true
+},
+                {
+                    "name": "JavaSE-21",
+                    "path": "C:/Java/graalvm-community-openjdk-21.0.1+12.1"
+                }
+            ]
+        }
+    }
+}

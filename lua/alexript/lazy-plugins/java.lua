@@ -7,6 +7,7 @@ return {
         'nvim-java/nvim-java-dap',
         'MunifTanjim/nui.nvim',
         'neovim/nvim-lspconfig',
+        'mfussenegger/nvim-jdtls',
         'mfussenegger/nvim-dap',
         "VonHeikemen/lsp-zero.nvim",
         {
