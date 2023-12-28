@@ -106,7 +106,7 @@ return {
     { "echasnovski/mini.nvim", branch = "stable" },
     {
         "j-hui/fidget.nvim",
---        tag = "v1.0.0",
+        --        tag = "v1.0.0",
         config = function()
             require("alexript.setup.fidget")
         end,
@@ -133,6 +133,13 @@ return {
         version = "*",
         config = function()
             require('alexript.setup.toggleterm')
+        end
+    },
+    {
+        'https://codeberg.org/esensar/nvim-dev-container',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require('alexript.setup.containers')
         end
     }
 }
