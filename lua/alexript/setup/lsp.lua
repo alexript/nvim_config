@@ -175,3 +175,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "muttrc*", "neomuttrc" },
+  callback = function()
+    vim.lsp.start({
+      name = "mutt",
+      cmd = { "mutt-language-server" }
+    })
+  end,
+})
