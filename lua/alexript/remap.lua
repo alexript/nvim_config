@@ -53,4 +53,4 @@ vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", KeymapDesc("
 -- switch buffers by F9 and F10
 vim.keymap.set({"n", "i"}, "<F9>", "<cmd>:bprevious<CR>", KeymapDesc("Swith to previous buffer"))
 vim.keymap.set({"n", "i"}, "<F10>", "<cmd>:bnext<CR>", KeymapDesc("Swith to next buffer"))
-vim.keymap.set({"n"}, "<F11>", "<cmd>:bwipeout<CR>", KeymapDesc("Close buffer"))
+vim.keymap.set({"n"}, "<F11>", "<cmd>:Bwipeout<CR>", KeymapDesc("Close buffer"))

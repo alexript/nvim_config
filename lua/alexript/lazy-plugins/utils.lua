@@ -19,6 +19,17 @@ return {
         end,
     },
     {
+        'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        config = function()
+            require("alexript.setup.barbar")
+        end,
+    },
+    "moll/vim-bbye",
+    {
         "petertriho/nvim-scrollbar",
         config = function()
             require("alexript.setup.scrollbar")
@@ -103,7 +114,13 @@ return {
             require("alexript.setup.toggler")
         end,
     },
-    { "echasnovski/mini.nvim", branch = "stable" },
+    {
+        "echasnovski/mini.nvim",
+        branch = "stable",
+        config = function()
+            require("alexript.setup.mini")
+        end,
+    },
     {
         "j-hui/fidget.nvim",
         --        tag = "v1.0.0",
