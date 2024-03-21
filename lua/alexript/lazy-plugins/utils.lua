@@ -49,13 +49,13 @@ return {
             require("alexript.setup.comment")
         end,
     },
-    {
-        "rest-nvim/rest.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-        config = function()
-            require("alexript.setup.rest-nvim")
-        end,
-    },
+    -- {
+    --     "rest-nvim/rest.nvim",
+    --     dependencies = { "nvim-lua/plenary.nvim" },
+    --     config = function()
+    --         require("alexript.setup.rest-nvim")
+    --     end,
+    -- },
     {
         "ggandor/leap.nvim",
         dependencies = { "tpope/vim-repeat" },
