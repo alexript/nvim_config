@@ -17,7 +17,7 @@ require("neotest").setup({
         max_width = 0.85,
         options = {}
     },
-    log_level = 1,
+    -- log_level = 1,
     adapters = {
         require("neotest-go")({
             experimental = {
@@ -29,10 +29,6 @@ require("neotest").setup({
         require("neotest-java")({
             ignore_wrapper = false, -- whether to ignore maven/gradle wrapper
         }),
-        --[[ require("neotest-python")({
-            dap = { justMyCode = false },
-        }),
-        require("neotest-plenary"), ]]
         require("neotest-vim-test")({
             ignore_file_types = { "python", "vim", "lua" },
         })
