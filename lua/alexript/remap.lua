@@ -49,3 +49,7 @@ end
 
 -- diffview
 vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", KeymapDesc("Show file history"))
+
+-- switch buffers by F9 and F10
+vim.keymap.set({"n", "i"}, "<F9>", "<cmd>:bprevious<CR>", KeymapDesc("Swith to previous buffer"))
+vim.keymap.set({"n", "i"}, "<F10>", "<cmd>:bnext<CR>", KeymapDesc("Swith to next buffer"))
