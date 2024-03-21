@@ -1,4 +1,6 @@
-require("nvim-treesitter.install").compilers = { "cl", "clang", "zig", "gcc" }
+tsinstall = require("nvim-treesitter.install")
+tsinstall.compilers = { "cl", "clang", "zig", "gcc" }
+tsinstall.prefer_git = true
 require("nvim-treesitter.configs").setup({
     ensure_installed = {
         "markdown",
