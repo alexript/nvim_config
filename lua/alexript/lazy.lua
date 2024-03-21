@@ -17,5 +17,8 @@ require('lazy').setup("alexript.lazy-plugins", {
     },
     ui = {
         border = "rounded"
+    },
+    git = {
+        url_format = "git@github.com:%s.git"
     }
 })
