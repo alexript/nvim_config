@@ -57,4 +57,4 @@ local nvimtreeFocusOrToggle = function()
         nvimTree.tree.focus()
     end
 end
-vim.keymap.set("n", "<leader>t", nvimtreeFocusOrToggle)
+vim.keymap.set("n", "<leader>tt", nvimtreeFocusOrToggle, KeymapDesc('Toggle NvimTree'))

@@ -59,7 +59,13 @@ return {
     },
     {
         "folke/neodev.nvim",
-        dependencies = "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            'nvim-neotest/neotest'
+        },
+        config = function()
+            require("alexript.setup.neodev")
+        end
     },
     {
         "folke/neoconf.nvim",
