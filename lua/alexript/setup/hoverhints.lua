@@ -1,2 +1,5 @@
-require("hoverhints").setup({
+require("eagle").setup({
 })
+
+vim.o.mousemoveevent = true
+

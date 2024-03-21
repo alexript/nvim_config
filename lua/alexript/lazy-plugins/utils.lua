@@ -103,7 +103,7 @@ return {
         end,
     },
     {
-        "soulis-1256/hoverhints.nvim",
+        "soulis-1256/eagle.nvim",
         config = function()
             require("alexript.setup.hoverhints")
         end,
