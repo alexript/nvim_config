@@ -1,4 +1,4 @@
-tsinstall = require("nvim-treesitter.install")
+local tsinstall = require("nvim-treesitter.install")
 tsinstall.compilers = { "cl", "clang", "zig", "gcc" }
 tsinstall.prefer_git = true
 require("nvim-treesitter.configs").setup({
