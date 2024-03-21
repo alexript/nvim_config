@@ -90,7 +90,7 @@ end
 lua_ls_setup()
 lspconfig.vls.setup({})
 lspconfig.rust_analyzer.setup({})
-lspconfig.jdtls.setup{}
+lspconfig.jdtls.setup({})
 -- lspconfig.jdtls.setup({
 --     settings = {
 --         java = {
