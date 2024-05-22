@@ -31,7 +31,7 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = nvimtreeOpen })
 
-function nvimtreeWidthRatio(percentage)
+local function nvimtreeWidthRatio(percentage)
 	local ratio = percentage / 100
 	local width = math.floor(vim.go.columns * ratio)
 	return width
