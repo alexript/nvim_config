@@ -72,5 +72,10 @@ return {
         dependencies = {
             "folke/neodev.nvim",
         }
+    },
+    {
+        "Fildo7525/pretty_hover",
+        event = "LspAttach",
+        opts = {}
     }
 }

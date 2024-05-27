@@ -129,7 +129,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
             vim.lsp.buf.definition()
         end, KeymapDesc("Go to definition", opts))
         vim.keymap.set("n", "K", function()
-            vim.lsp.buf.hover()
+            --            vim.lsp.buf.hover()
+            require('pretty_hover').hover()
         end, KeymapDesc("Hover info about the symbol under cursor", opts))
         vim.keymap.set("n", "<leader>vws", function()
             vim.lsp.buf.workspace_symbol()
@@ -178,11 +179,11 @@ vim.diagnostic.config({
 
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "muttrc*", "neomuttrc" },
-  callback = function()
-    vim.lsp.start({
-      name = "mutt",
-      cmd = { "mutt-language-server" }
-    })
-  end,
+    pattern = { "muttrc*", "neomuttrc" },
+    callback = function()
+        vim.lsp.start({
+            name = "mutt",
+            cmd = { "mutt-language-server" }
+        })
+    end,
 })
