@@ -24,22 +24,6 @@ dap.listeners.before.event_exited.dapui_config = function()
     dapui.close()
 end
 
-dap.adapters.go = function(callback, config)
-  -- Wait for delve to start
-    vim.defer_fn(function()
-        callback({type = "server", host = "127.0.0.1", port = "port"})
-      end,
-    100)
-end
-dap.configurations.go = {
-    {
-      type = "go",
-      name = "Debug",
-      request = "launch",
-      program = "${file}",
-    },
-}
-
 vim.keymap.set('n', '<F5>', require 'dap'.continue)
 vim.keymap.set('n', '<F8>', require 'dap'.step_over)
 vim.keymap.set('n', '<F7>', require 'dap'.step_into)
