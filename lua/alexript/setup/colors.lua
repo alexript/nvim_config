@@ -13,6 +13,7 @@ require("catppuccin").setup({
         fidget = true,
         markdown = true,
         ufo = true,
+        barbar = true,
         mini = {
             enabled = true,
             indentscope_color = "macchiato", -- catppuccin color (eg. `lavender`) Default: text
@@ -20,6 +21,7 @@ require("catppuccin").setup({
         lsp_trouble = true,
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
+    default_integrations = false,
 })
 
 vim.cmd.colorscheme("catppuccin")
