@@ -15,7 +15,7 @@ require("nvim-treesitter.configs").setup({
         "javascript",
         "typescript",
         "go",
-        "java",
+--        "java",
         "css",
         "html",
         "diff",

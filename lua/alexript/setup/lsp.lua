@@ -66,7 +66,7 @@ require("neoconf").setup({
     },
 })
 -- Setup nvim-java before lspconfig
-require('java').setup()
+-- require('java').setup()
 
 local lsp_zero = require('lsp-zero')
 local lspconfig = require("lspconfig")

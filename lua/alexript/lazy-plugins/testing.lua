@@ -10,7 +10,7 @@ return {
             -- adapters
             'nvim-neotest/neotest-vim-test',
             "nvim-neotest/neotest-go",
-            'rcasia/neotest-java',
+--            'rcasia/neotest-java',
         },
         config = function()
             require("alexript.setup.neotest")

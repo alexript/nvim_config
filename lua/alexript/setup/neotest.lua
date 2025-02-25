@@ -26,9 +26,9 @@ require("neotest").setup({
             args = { "-count=1", "-timeout=60s" },
             recursive_run = true,
         }),
-        require("neotest-java")({
-            ignore_wrapper = false, -- whether to ignore maven/gradle wrapper
-        }),
+--        require("neotest-java")({
+--            ignore_wrapper = false, -- whether to ignore maven/gradle wrapper
+--        }),
         require("neotest-vim-test")({
             ignore_file_types = { "python", "vim", "lua" },
         })
